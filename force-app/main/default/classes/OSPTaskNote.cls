@@ -31,7 +31,7 @@ public with sharing class OSPTaskNote{
     private static Order_Comment__c newOc(Order o, String text){
         //Create an Order_Comment__c record to insert
         Order_Comment__c oc = new Order_Comment__c();
-        String name = o.OSP_Engineer__r.Name;
+        String name = o.OSP_Engineer__c;
         String userName = getUserName(name);
         Datetime noteDate = Datetime.now();
         String noteText = userName + ' : ' + noteDate.format('MM/dd/yyyy') + ' -- ' + text;
