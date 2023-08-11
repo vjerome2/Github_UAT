@@ -7,9 +7,9 @@ public with sharing class OSPTaskNote{
                             LIMIT 1];
 
 
-        String userName = users[0].Name;
-        if (userName != null){
-            return userName;
+        
+        if (users.size() > 0 && users != null){
+            return users[0].Name;
         } else{
             return 'OSP Engineer Not Assigned ';
         }
